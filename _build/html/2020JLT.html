@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cost-effective multi-parameter optical performance monitoring using multi-task deep learning with adaptive ADTP and AAH &#8212; PAPERHUB</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Optimization strategy of power control for C+L+S band transmission using simulated annealing algorithm" href="2021OE.html" />
+    <link rel="prev" title="CV" href="cv.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">PAPERHUB</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Paperhub of Huaijian Luo
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Basic Info
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cv.html">
+   CV
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Journal Papers
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Cost-effective multi-parameter optical performance monitoring using multi-task deep learning with adaptive ADTP and AAH
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021OE.html">
+   Optimization strategy of power control for C+L+S band transmission using simulated annealing algorithm
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/2020JLT.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F2020JLT.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operation-principle">
+   2. Operation principle
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-adaptive-asynchronous-delay-tap-sampling-plot">
+     A. Adaptive asynchronous delay tap sampling plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-asynchronous-amplitude-histogram">
+     B. Asynchronous amplitude histogram
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-multiple-input-multi-task-learning">
+     C. Multiple input multi-task learning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#experimental-results-and-discussion">
+   3. EXPERIMENTAL RESULTS AND DISCUSSION
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-experimental-setup">
+     A. Experimental setup
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-performance-of-the-multi-input-multi-task-learning-model">
+     B. Performance of the multi-input multi-task learning model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-multiple-inputs-multi-task-learning-for-osnr-estimation">
+     C.    Multiple inputs multi-task learning for OSNR estimation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-impact-of-the-bandwidth-of-component-on-opm">
+     D. Impact of the bandwidth of component on OPM
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-performance-comparison-of-models-with-different-input-and-output-structures">
+     E. Performance comparison of models with different input and output structures
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-influence-of-different-generation-parameters-of-aadtp-and-aah-on-neural-network-performance">
+     F. Influence of different generation parameters of AADTP and AAH on neural network performance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#g-effect-of-sampling-jitter-on-opm-performance">
+     G. Effect of sampling jitter on OPM performance
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   4. CONCLUSIONS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   5. References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="cost-effective-multi-parameter-optical-performance-monitoring-using-multi-task-deep-learning-with-adaptive-adtp-and-aah">
+<h1>Cost-effective multi-parameter optical performance monitoring using multi-task deep learning with adaptive ADTP and AAH<a class="headerlink" href="#cost-effective-multi-parameter-optical-performance-monitoring-using-multi-task-deep-learning-with-adaptive-adtp-and-aah" title="Permalink to this headline">¶</a></h1>
+<object data="https://img.shields.io/badge/Journal%20of%20Lightwave%20Technology-10.1109%2FJLT.2020.3041520-blue?link=https://ieeexplore.ieee.org/document/9274477">
+</object>
+<div class="section" id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>A cost-effective optical performance monitoring (OPM) scheme is proposed to realize modulation format identification (MFI), baud rate identification (BRI), chromatic dispersion identification (CDI) and optical signal-to-noise ratio (OSNR) estimation of optical signals simultaneously. This technique is based on multi-task learning (MTL) neural network model with adaptive asynchronous delay tap plot (AADTP) and asynchronous amplitude histogram (AAH) by direct detection in the intermediate nodes of optical networks. The generation of AADTP depends on the sampling rate but not the symbol rate, which makes the scheme transparent to the baud rate. The combined inputs of AADTP with AAH improve accuracies of the neural network, compared with a single input. This scheme is verified experimentally where signals with two formats, quadrature phase shift keying (QPSK) and 16 quadrature amplitude modulation (16QAM), two baud rates, 14 GBaud and 28 GBaud, and three CD situations, 0 ps/nm, 858.5 ps/nm, and 1507.9 ps/nm, are adopted. The best accuracies of MFI, BRI, CDI are 100%, 99.81%, and 99.83%, respectively. Meanwhile, the lowest average mean absolute error (MAE) of OSNR estimation is 0.2867 dB over the range of 10-24 dB (QPSK), 15-29 dB (16QAM). It is cost-effective and practical for the proposed OPM technique to be applied in the intermediate nodes to construct smart optical networks since it uses only one photodetector, assisted with an advanced deep learning algorithm.</p>
+</div>
+<div class="section" id="introduction">
+<span id="intro"></span><h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>To satisfy the increasing demand for communication bandwidth, we need to apply signals with high order modulation formats to develop the bandwidth efficiency, which makes optical networks more complex. And the reconfigurable optical add/drop multiplexer (ROADM) makes the systems dynamic and reconfigurable [1]. Monitoring the condition of signals to keep the quality of service (QoS) becomes a critical issue. Optical performance monitoring (OPM) technique can obtain various parameters of physical layers of fiber networks, such as modulation format (MF), baud rate (BR), launch power, optical signal-to-noise ratio (OSNR) of signals and so on. This information helps the management of smart reconfigurable software define network (SDN) [2].
+At the end node of the optical system, coherent receiver and digital signal processing are typical schemes to recover the information of signals [3,4]. But it is too expensive to apply them in the intermediate nodes of the optical system. Therefore, we focus on the OPM technique for the intermediate nodes of optical networks. To achieve that, there are some requirements for the OPM technique. Firstly, low cost, because a large number of intermediate nodes will bring enormous deployment costs. Secondly, this technique must be able to monitor multiple parameters simultaneously to satisfy the demands of intelligent network management. Last but not least, it should be transparent to signals with different modulation formats and baud rates and be robust in most situations, to grapple with the complicated transmission of optical networks. However, conventional OPM techniques cannot satisfy these demands since most of them can only monitor one kind of parameter, and they are either complicated or expensive. Taking OSNR estimation as an example, there are many traditional methods to estimate OSNR, such as polarization nulling [5,6], interferometry [7-9], and technique based on nonlinear effect [10]. But they cannot satisfy those requirements above.
+Machine learning (ML) has triggered widespread interests in recent years, especially the deep learning (DL), which has various applications in different research areas. Unlike traditional OPM techniques, ML based OPM techniques can learn the mapping model from inputs and labels by extracting features from raw data by itself, without complex artificial design. There are some ML algorithms used in OPM, such as principal component analysis (PCA) [11], support vector machine (SVM) [12,13], kernel-based methods [14], artificial neural network (ANN) [15-18]. Also, DL algorithms have a good performance on OPM, like deep neural network (DNN) [19], convolutional neural network (CNN) [20,21], and long short-term memory (LSTM) [22]. Moreover, combining DL with multi-task learning can monitor various parameters simultaneously, such as measuring MF and OSNR [23-27], CD and OSNR [28], MF, BR and OSNR [29]. In [26], Wang et al. demonstrated joint modulation format identification and OSNR estimation by using a classification CNN model with ADTP. However, it is more reasonable to apply the regression model for estimating OSNR, since OSNR is a continuously changing value but not discrete. Another limit is that generating ADTP needs a priori baud rate information, and obtaining that requires additional algorithm, which increases the computational complexity. In [29], Cheng investigated the multi-task learning model for OPM by using AAH as the feature, which only studied the signals with low symbol rates in the back-to-back situation and the estimation error was not low enough.
+In this paper, we utilize only one photodetector (PD) to receive the intensity of signal to generate AADTP and AAH at the same time, which is low-complexity and cost-effective. Meanwhile, the generation of AADTP does not require the information of the symbol rate because the delay time is only related to the sampling rate. Then we design a multi-input multi-task learning neural network (NN) model and train it with inputs of AADTP and AAH. The experimental results show that the MAE of OSNR estimation is 0.2867 dB for signals with two modulation formats, QPSK and 16QAM, two different symbol rates, 14 GBaud and 28 GBaud, and three CD situations, 0 ps/nm, 858.5 ps/nm, and 1507.9 ps/nm. The accuracies of MFI, BRI, and CDI are 100%, 99.81%, and 99.83%, respectively. The effect of the bandwidth of components on the prediction of models is also investigated. The performance between models with different structure of input and output are compared as well.</p>
+</div>
+<div class="section" id="operation-principle">
+<span id="principle"></span><h2>2. Operation principle<a class="headerlink" href="#operation-principle" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<div class="section" id="a-adaptive-asynchronous-delay-tap-sampling-plot">
+<span id="aadtp"></span><h3>A. Adaptive asynchronous delay tap sampling plot<a class="headerlink" href="#a-adaptive-asynchronous-delay-tap-sampling-plot" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="jlt1">
+<a class="reference internal image-reference" href="_images/jlt1.png"><img alt="_images/jlt1.png" src="_images/jlt1.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Schematic diagram of generation of AADTP and AAH process with (a) direct detection and (b) two algorithms</span><a class="headerlink" href="#jlt1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="jlt2">
+<a class="reference internal image-reference" href="_images/jlt2.png"><img alt="_images/jlt2.png" src="_images/jlt2.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">AADTPs generated by signals with different formats, baud rates, and OSNR values</span><a class="headerlink" href="#jlt2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Traditional asynchronous delay tap sampling plot (ADTP) is a 2D matrix that carries the information of the original signal.  In the conventional generation process of ADTP, there is a time delay between two electrical lines before ADC, which is the key to generate ADTP. The time delay is usually equal to 1/2 or 1/4 time period of symbol interval, which means that the baud rate of the signal needs to be obtained in advance to calculate time delay. To get rid of obtaining baud rate by using a time-consuming algorithm, we propose the adaptive asynchronous delay tap sampling plot (AADTP), which needs no prior information of the baud rate. The delay time in our method is fixed and independent of the baud rate. And the generated AADTP retains the statistical characteristics of ADTP, which is sensitive to MF, BR, CD, and OSNR values [30,31]. Specific generation steps are as follows:</p>
+<p>Firstly, the PD converts the received signal to the electrical intensity waveform, as shown in Fig. 1(a). Secondly, the ADC samples the waveform at a relatively low sampling rate. Then, the sampled intensity sequence xi is obtained, and we set <span class="math notranslate nohighlight">\(\ y_i\ =\ x_{i+j}\ (i\geq1,\ \ j\geq1)\)</span> and combine <span class="math notranslate nohighlight">\(x_i\)</span> and <span class="math notranslate nohighlight">\(y_i\)</span> as a pair of coordinates, as described in Fig. 1(b). Lastly, thousands of pairs (we use 50000 pairs here) constitute an AADTP. The aim of choosing an integer j in the subscript of <span class="math notranslate nohighlight">\(x_{i+j}\)</span> is to introduce a fixed time delay between <span class="math notranslate nohighlight">\(x_i\)</span> and <span class="math notranslate nohighlight">\(y_i\)</span>. And the value of j can be any positive integer because the corresponding AADTP possesses statistical characteristics of signal information sensitivity, as long as j is not equal to zero. Here we set j=1, which means that the delay time is equal to the sampling interval and independent of the symbol rate. This method of ADTP generation is adaptive and more flexible compared with the traditional one, and it saves costs by using only one ADC without an electrical delay line. The generated AADTP can be seen in Fig. 2. It is evident that AADTPs are different under various formats, baud rates, and OSNR values.</p>
+</div>
+<div class="section" id="b-asynchronous-amplitude-histogram">
+<span id="aah"></span><h3>B. Asynchronous amplitude histogram<a class="headerlink" href="#b-asynchronous-amplitude-histogram" title="Permalink to this headline">¶</a></h3>
+<p>Asynchronous amplitude histogram (AAH) also has some features related to parameters of signals. The x-axis of AAH presents the amplitude value, which is divided into some intervals. And the y-axis denotes the number of occurrences in each amplitude interval [29]. The generation process of AAH can be elaborated in Fig. 1(a) and the bottom part of Fig. 1(b). After sampling, the intensity sequence x_i can be got and its amplitude can be divided into some intervals. The number of occurrences of each interval will be counted to form the AAH. The generated AAHs are shown in Fig. 3. The features in AAH, different from those in AADTP, are one-dimensional. Therefore, we can combine the statistical features of AAH and AADTP to enhance the information provided for NN.</p>
+<div class="figure align-default" id="jlt3">
+<a class="reference internal image-reference" href="_images/jlt3.png"><img alt="_images/jlt3.png" src="_images/jlt3.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">AAHs generated by signals with different formats, baud rates, and OSNR values</span><a class="headerlink" href="#jlt3" title="Permalink to this image">¶</a></p>
+</div>
+<p>AADTP and AAH can be generated at the same time by two algorithms from the identical waveform. From an intuitive point of view, combining AADTP and AAH for NN would have better performance of OPM than the method that only uses one of them, because the combined inputs have more statistical information.</p>
+</div>
+<div class="section" id="c-multiple-input-multi-task-learning">
+<span id="mtl"></span><h3>C. Multiple input multi-task learning<a class="headerlink" href="#c-multiple-input-multi-task-learning" title="Permalink to this headline">¶</a></h3>
+<p>Multi-task learning (MTL) is a kind of deep learning model. It has been applied in many fields, such as natural language processing, computer vision, and speech recognition [32]. Compared with single-task learning, MTL has better performance when several related tasks trained together [26,29,32]. Because different tasks can share common parameters in shared layers, and this improves the performance of the model [33]. The MTL model applied in this study has four tasks, which are modulation format identification (MFI), baud rate identification (BRI), chromatic dispersion identification (CDI), and OSNR estimation, respectively. The designed structure of NN is shown in Fig. 4.</p>
+<div class="figure align-default" id="jlt4">
+<a class="reference internal image-reference" href="_images/jlt4.png"><img alt="_images/jlt4.png" src="_images/jlt4.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Structure of multi-task learning model with AADTP and AAH inputs</span><a class="headerlink" href="#jlt4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Fig. 4 shows three main parts of the neural network. Part A represents the feature extraction module for the AADTP. It consists of four convolutional layers, four max-pooling layers and one flatten layer. The convolutional layer initializes with random kernels to perform convolution with the input 2D matrix to extract its edge features. The function of the max-pooling layer is to reduce the size of the matrix, the output from the convolutional layer, to reduce computational complexity. After feature extraction, the compressed feature matrices will be put into the flatten layer to be converted into a 1D vector for the subsequent process. Part B denotes the information extraction process from AAH, and it includes only one fully connected layer. Part A and part B are combined by concatenating the outputs of the flatten layer and fully connected layer. The connection between two fully connected layers in part C is achieved by</p>
+<div class="math notranslate nohighlight" id="equation-neuron">
+<span class="eqno">(1)<a class="headerlink" href="#equation-neuron" title="Permalink to this equation">¶</a></span>\[\begin{split}a_j = w_{ij} \cdot o_i + b_{ij} \\
+o_j = F（a_j)\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(w_{ij}\)</span> and <span class="math notranslate nohighlight">\(b_{ij}\)</span> are the weight and bias between <span class="math notranslate nohighlight">\(i_{th}\)</span> and <span class="math notranslate nohighlight">\(j_{th}\)</span> layer, respectively. o_i and <span class="math notranslate nohighlight">\(o_j\)</span> represent neuron vectors of <span class="math notranslate nohighlight">\(i_{th}\)</span> and <span class="math notranslate nohighlight">\(j_{th}\)</span> layer, F is the activation function, which is usually a nonlinear function, such as  . Part C consists of four tasks, which are MFI, BRI, CDI, and OSNR estimation, respectively. Each of them has three hidden fully connected layers and one output layer. The first three tasks belong to the classification where the output is a 1×N vector, and N denotes the number of classes. For example, if there are three modulation formats (e.g., QPSK, 16QAM, and 64QAM) to be identified in task 1, thus N=3 and the corresponding vectors are [1 0 0], [0 1 0] and [0 0 1]. For classification tasks, the loss function is called cross-entropy (CE), shown in Eq. (2)</p>
+<div class="math notranslate nohighlight" id="equation-ce">
+<span class="eqno">(2)<a class="headerlink" href="#equation-ce" title="Permalink to this equation">¶</a></span>\[L_{k}=-\frac{1}{M} \sum_{i=1}^{M} \sum_{c=1}^{N} y_{i, c} \log \left(\hat{y}_{i, c}\right)\]</div>
+<div class="math notranslate nohighlight" id="equation-ce2">
+<span class="eqno">(3)<a class="headerlink" href="#equation-ce2" title="Permalink to this equation">¶</a></span>\[L_{k}=-\frac{1}{M} \sum_{i=1}^{M}\left(y_{i} \log \left(\hat{y}_{i}\right)+\left(1-y_{i}\right) \log \left(1-\hat{y}_{i}\right)\right)\]</div>
+<p>where k represents the kth task, M is the number of samples, and c denotes the specific class in the kth task, respectively. And <span class="math notranslate nohighlight">\(y_i\)</span> is the label of task and <span class="math notranslate nohighlight">\(\hat{y}_i\)</span> denotes the predicted possibility. For the situation that class number N=2, the cross-entropy function can be calculated as Eq. (3).</p>
+<p>As a regression task, the output of OSNR estimation is a continuous value but not a discrete vector. The corresponding loss function is mean absolute error (MAE):</p>
+<div class="math notranslate nohighlight" id="equation-mae">
+<span class="eqno">(4)<a class="headerlink" href="#equation-mae" title="Permalink to this equation">¶</a></span>\[L_{mae} = \frac{1}{M} \sum^{M}_{i=1}|y_i-\hat{y_{i}}|\]</div>
+<p>Here we use MAE but not root mean square error (RMSE). Because MAE outperforms RMSE as the metric to evaluate the average error of model [34]. After defining the loss function of each task, the final loss function would be</p>
+<div class="math notranslate nohighlight" id="equation-loss">
+<span class="eqno">(5)<a class="headerlink" href="#equation-loss" title="Permalink to this equation">¶</a></span>\[L = \lambda_1 L_1 +  \lambda_2 L_2 +  \lambda_3 L_3 +  \lambda_4 L_{mae}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda_k\)</span> denotes the weight of the kth task in the loss function. This parameter is used to adjust the importance of each task in the NN model to improve the overall performance. Weights and biases of layers can be adjusted automatically to make the prediction closer to target in backpropagation. The updating equations of weights and biases show below</p>
+<div class="math notranslate nohighlight" id="equation-update">
+<span class="eqno">(6)<a class="headerlink" href="#equation-update" title="Permalink to this equation">¶</a></span>\[\begin{split}w^{new}_{ij} = w^{old}_{ij} - \alpha \frac{\partial L}{\partial w^{old}_{ij}} \\
+b^{new}_{ij} = b^{old}_{ij} - \alpha \frac{\partial L}{\partial b^{old}_{ij}}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> represents the learning rate. By applying these equations, hyperparameters are updated automatically at the end of each training epoch to reduce the loss until it converges to a stable value. Meanwhile, the model will make predictions that are getting closer to targets continuously.</p>
+</div>
+</div>
+<div class="section" id="experimental-results-and-discussion">
+<span id="results"></span><h2>3. EXPERIMENTAL RESULTS AND DISCUSSION<a class="headerlink" href="#experimental-results-and-discussion" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<div class="section" id="a-experimental-setup">
+<span id="setup"></span><h3>A. Experimental setup<a class="headerlink" href="#a-experimental-setup" title="Permalink to this headline">¶</a></h3>
+<p>We carried out the experiment based on the schematic configuration, which can be seen in Fig. 5. Arbitrary waveform generator (AWG, Keysight M8196A) can be controlled to generate optical signals with different modulation formats (QPSK, 16QAM) at different baud rates (14 GBaud, 28 GBaud). Amplified spontaneous emission (ASE) noise was generated by an erbium-doped fiber amplifier (EDFA). After attenuation by the variable optical attenuator (VOA), noise coupled with signals to change the OSNR. The step was 1 dB per adjustment. 0, 50.5, and 88.7 km fibers were used to introduce CD (0 ps/nm, 858.5 ps/nm, and 1507.9 ps/nm) into signals. Then OSNR-adjusted signals propagated through the EDFA to get gain to satisfy the power requirement of the photodetector (40 GHz PD). The optical bandpass filter (OBPF) was used to filter out the out-of-band noise with 0.8-nm bandwidth. PD converted the received optical signals to electrical signals, which were asynchronously sampled by the digital signal analyzer (DSA, Keysight DSAX96204Q) with 80 GSa/s. The electrical bandwidth of DSA is 33.3 GHz. The use of such a high sampling rate here is to facilitate the subsequent study of the effect of the bandwidth of components. In actual systems, low-speed ADC can be used. Another part of optical signals was received by the optical spectrum analyzer (OSA, 0.1 nm resolution) to get the real value of OSNR. Under the situation of transmission of fibers with three distances, we got signals with OSNR ranging from 10-24 dB (QPSK), 15-29 dB (16QAM). Finally, the data sampled by DSA was processed to generate AADTPs and AAHs by computer (i7-8700 CPU) in Matlab (R2018b).</p>
+<div class="figure align-default" id="jlt5">
+<a class="reference internal image-reference" href="_images/jlt5.png"><img alt="_images/jlt5.png" src="_images/jlt5.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Schematic setup for OPM experiment</span><a class="headerlink" href="#jlt5" title="Permalink to this image">¶</a></p>
+</div>
+<p>For each OSNR, the sampled data generated 200 AADTPs (64 <span class="math notranslate nohighlight">\(\times\)</span> 64 matrix) and AAHs (128 <span class="math notranslate nohighlight">\(\times\)</span> 1 vector). Therefore, the whole dataset consisted of 36000 AADTPs and 36000 AAHs, respectively. The dataset was divided into three parts: 80% for the training set (28800 samples), 10% for the validation set (3600 samples), and 10% for the test set (3600 samples), respectively. The validation set was used to validate whether the NN model was overfitting or not. And evaluating the trained model with the test set is the standard way to acknowledge the whole performance of the NN model.</p>
+<p>Our neural network established based on the Keras, a python deep learning library, with Tensorflow as backend. Fig. 4 displays the structure of the designed NN. The padding way of four convolutional layers was “same” which meant that these layers would not change the input size of the matrix. And the numbers of kernels of these layers were 16, 16, 128, and 64, separately. The activation function of each layer was the exponential linear unit (ELU), which made learning faster and have more robust generalization than the rectified linear unit (RELU) [35]. We also introduced L2 regularization (L2 coefficient = 0.001), to avoid overfitting. As for the task weights, we chose <span class="math notranslate nohighlight">\(\lambda_4=1\)</span>. Because this regression task had the largest loss, and increasing its weight can help reduce the prediction error. The other three weights were 0.189, 0.158, 0.188 for task 1, 2, and 3, respectively. These hyperparameters of NN were selected by an optimization algorithm, called Bayesian optimization [36], which saved a lot of time compared with random searching or grid searching.</p>
+</div>
+<div class="section" id="b-performance-of-the-multi-input-multi-task-learning-model">
+<span id="base-perf"></span><h3>B. Performance of the multi-input multi-task learning model<a class="headerlink" href="#b-performance-of-the-multi-input-multi-task-learning-model" title="Permalink to this headline">¶</a></h3>
+<p>After the experiment, we got AADTPs and AAHs from Matlab, which were fed into the multiple inputs multi-task learning model for supervised learning. In the training process, we conducted the hyperparameter optimization for the best performance of the NN model. Thus, the results shown in this part are based on the optimal combination of hyperparameters. Then, we performed ten times of training with the optimal hyperparameters to eliminate the randomness of model initiation and presented the learning process of the best one, which can be seen in Fig. 6.</p>
+<div class="figure align-default" id="jlt6">
+<a class="reference internal image-reference" href="_images/jlt6.png"><img alt="_images/jlt6.png" src="_images/jlt6.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Accuracies for MFI, BRI, CDI, and MAE of OSNR estimation on (a) training set (b) validation set</span><a class="headerlink" href="#jlt6" title="Permalink to this image">¶</a></p>
+</div>
+<p>In Fig. 6(a), it is noted that the accuracies of MFI and CDI can almost reach 100% after about 160 epochs. But the accuracy of BRI can only reach 98.56%. The MAE of OSNR estimation converges to 0.3085 dB after 232 epochs. The convergences of MFI, BRI, and CDI are faster than OSNR estimation. After only 15 epochs, the training accuracies are over 95% for classification tasks. In a deep neural network, the performance of the model on the training set and validation set can be used as a criterion to judge whether the model is overfitting or underfitting. Therefore, we show the performance of the model on the validation set in Fig. 6(b). It is clear for MFI and CDI that they can achieve almost 100% accuracy (≈99.5%) after 200 epochs and accuracy of BRI can be stabilized at 97.83%, which means there are only 78 mistakes out of 3600 samples when identifying baud rate. We check the incorrect predictions of BR and find that most of them are QPSK signals within 10-15 dB under B2B. The reason might be that the AADTP and AAH of these signals have similar statistical features between 14/28 GBaud. Over 99.7% accuracies on MFI and CDI proves that this model is transparent to the modulation formats and robust to the CD. For OSNR estimation, the MAE value converges to 0.455 dB. These two figures prove that the NN model has good generalization because the gap between the training set and the validation set is small.</p>
+</div>
+<div class="section" id="c-multiple-inputs-multi-task-learning-for-osnr-estimation">
+<span id="osnr"></span><h3>C.    Multiple inputs multi-task learning for OSNR estimation<a class="headerlink" href="#c-multiple-inputs-multi-task-learning-for-osnr-estimation" title="Permalink to this headline">¶</a></h3>
+<p>Then, we focus on the OSNR estimation to find out if there is any regularity to guide the further experiment for OPM.</p>
+<div class="figure align-default" id="jlt7">
+<a class="reference internal image-reference" href="_images/jlt7.png"><img alt="_images/jlt7.png" src="_images/jlt7.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">The distribution of predicted OSNR values with format (a) QPSK (b) 16QAM and (c) MAE on signals with both formats</span><a class="headerlink" href="#jlt7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Fig. 7(a) and (b) show the distribution of predicted OSNR values. The blue line in each OSNR represents the range of prediction, and the top, median, bottom dashes denote the maximum, mean, and minimum predictions, respectively. The black diagonal dotted line represents the optimal prediction line. The blue translucent violin-shaped graph denotes the predicted OSNR distribution (120 samples for each dB). And if the shorter and the wider the violin, the more concentrated the predicted values. Although we can see that some maximum predicted values are 2 dB larger than the true value, the 95% predictions (blue violin) are within 1 dB for each OSNR. This can be verified by Fig. 7(c) that the MAE values for all OSNRs are less than 1 dB. Compared with QPSK signals, MAE values for 16QAM signals are larger. We think this is because the AADTP and AAH generated by 16QAM signals are much similar than these generated by QPSK signals, which increases regression errors. Another phenomenon is noted that the distributions of OSNR prediction with high OSNR values are longer than those with low OSNR in Fig. 7 (a) and (b). The reason may be that the noise power is low when OSNR is high (over 20 dB), and this makes AADTPs and AAHs hard to be discriminated between adjacent OSNR values.</p>
+<p>We study the performance of the trained model on different modulation formats, as well as different baud rates and transmission distances. Table I shows the MAE values of OSNR estimation on different signals.</p>
+<p>As displayed in Table I, signals with different baud rates have almost the same OSNR MAE value. However, the performance decreases as the signal propagates through the longer fiber. We think this is because signals stimulate scattering noise in fiber which accumulates in the propagation. After amplification by EDFA, the noise is amplified with signals and affects the accuracy of OSNR regression. Another reason is that the sampled waveform is easily distorted by pulse overlapping caused by large CD. Although the AADTP is more robust against CD than the AAH, it is still hard for the model to give accurate predictions when monitoring ultra-long transmission systems (i.e., more than 1000km).</p>
+<p>Despite the limit of application in the long-haul system, the OSNR MAE can be still decreased by the following ways. First, we can increase the quantity of dataset in the training stage to reduce OSNR error, which is demonstrated in [26]. Second, a relatively best set of parameters for dataset generation and hyperparameters can be selected from the pre-training process to develop the OSNR prediction. This method will be elaborated in part F later. Third, we can combine the DSP compensation algorithm for the CD with our monitoring scheme in the coherent detection to get rid of the effect of CD to develop the accuracy of OSNR estimation for the long-haul system.</p>
+</div>
+<div class="section" id="d-impact-of-the-bandwidth-of-component-on-opm">
+<span id="bandwidth"></span><h3>D. Impact of the bandwidth of component on OPM<a class="headerlink" href="#d-impact-of-the-bandwidth-of-component-on-opm" title="Permalink to this headline">¶</a></h3>
+<p>To investigate the influence of bandwidth of components on OSNR estimation (i.e. PD and ADC), we filter the received signals on Matlab. 10 GHz, 7.5 GHz, 5 GHz, 2.5 GHz, 1 GHz, and 0.5 GHz digital filters are applied to simulate the filtering effect of the limited bandwidth of PD and ADC. After getting the waveforms of filtered signals, we generate the corresponding AADTP and AAH dataset and trained NN models again. Then the accuracies of classification tasks and the average MAE values for signals with different filters are calculated, which are illustrated in Fig. 8.</p>
+<div class="figure align-default" id="jlt8">
+<a class="reference internal image-reference" href="_images/jlt8.png"><img alt="_images/jlt8.png" src="_images/jlt8.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">The distribution of predicted OSNR values with format (a) QPSK (b) 16QAM and (c) MAE on signals with both formats</span><a class="headerlink" href="#jlt8" title="Permalink to this image">¶</a></p>
+</div>
+<p>The task of MFI is the easiest one because the accuracy can be maintained at about 100% no matter the bandwidth of the signal changed. For CDI, the performance increases with the increment of bandwidth, and the accuracy approaches 100% when the bandwidth of the signal is more than 5 GHz.  The trend of BRI is very similar to that of CDI, and the model gets the best accuracy, 99.11%, at 5 GHz filtered dataset, which is even higher than the accuracy of the model on the unfiltered dataset. For OSNR estimation, in addition to the model on the unfiltered dataset, getting MAE of 0.469 dB, the best model is trained by the 5 GHz filtered dataset. To conclude, we can use low bandwidth components in the internodes of optical networks to monitor the quality of signals, which still can get relatively good performance compared with the high-bandwidth components.</p>
+</div>
+<div class="section" id="e-performance-comparison-of-models-with-different-input-and-output-structures">
+<span id="inout"></span><h3>E. Performance comparison of models with different input and output structures<a class="headerlink" href="#e-performance-comparison-of-models-with-different-input-and-output-structures" title="Permalink to this headline">¶</a></h3>
+<p>To demonstrate that the NN model, with multi-input and multi-output structure, has better performance over the model with single-input or single-output, we make a comparison between these models. After training and testing these models, we summarize their performance in Tables II and Table III.</p>
+<p>Table II shows the comparison between multi-input and single-input models. The multi-input model outperforms the single-input ones in all tasks. Meanwhile, the model with AADTP input has better performance than the AAH one, which reflects the 2D matrix input can provide more information compared with 1D vector input. In Table III, the single-output models consist of four individual models with MF, BR, CD prediction, and OSNR estimation, respectively. We can see that apart from the CDI, other tasks have better predictions in the MTL model. When we consider the whole performance, the small gap in CDI can be ignored. We can conclude from the analysis above that the NN model with multi-input and multi-output has the best overall performance for OPM. Another advantage of the multi-task model is saving time, training the multi-task learning model costs less time because the number of neurons in the multi-task model is less than the sum of the number of neurons in a single task model.</p>
+</div>
+<div class="section" id="f-influence-of-different-generation-parameters-of-aadtp-and-aah-on-neural-network-performance">
+<span id="para"></span><h3>F. Influence of different generation parameters of AADTP and AAH on neural network performance<a class="headerlink" href="#f-influence-of-different-generation-parameters-of-aadtp-and-aah-on-neural-network-performance" title="Permalink to this headline">¶</a></h3>
+<p>In the previous introduction of AADTP and AAH, we choose the delay factor j = 1, and bin number (the length of AAH vector) equals to 128 to generate AADTP and AAH, respectively. However, different parameters lead to distinct datasets, which in turn affect the performance of the trained NN models. To study the relationship between the generation parameters and the performance of the model, we conduct two control experiments.</p>
+<p>In the first experiment, we keep the number of bins in AAH (i.e. 128) unchanged to eliminate the effect of bin number on the NN model. And we change the delay factor j in AADTP to compare the OPM performance of corresponding models. Likewise, we train each NN model ten times with each dataset and select the one whose loss is minimum to avoid the random error. The results of the first control experiment are shown in Table IV. It can be seen that the OPM performances are similar on four tasks, which reflects the AADTP has enough features to be extracted for OPM regardless of the interval of delay time. At the same time, the performances of NN fluctuates, which means we can still find one best delay time (i.e. delay time = 1125 ps for j = 9) to get higher overall prediction accuracy.</p>
+<p>Similarly, we also conduct a control experiment to investigate the effect of bin number in AAH on OPM performance. Here, we train the NN models by using AAH with 16, 32, 64, 128, and 256 bin numbers and AADTP with delay factor j = 1. Results are shown in Table V, from which we can get the similar conclusion in the first experiment. That is the OPM performance fluctuates with bin numbers in AAH without large effect. And the best appropriate bin number is 16 for its highest performance over four tasks. This implies we can select one set of better parameters to promote the OPM performance by pre-training.</p>
+<p>Finally, we generate the dataset by selecting the best set of parameters (j = 9, bin number = 16) and use it to train the NN model. The accuracies are 100%, 99.81%, and 99.83% for MFI, BRI, and CDI, respectively. And the OSNR estimation MAE is 0.2867 dB. It is obvious that the overall performance of this model is higher than what we showed on Table IV and Table V. It should be noted that this set of parameters for generating dataset is specific for signals in this experiment. If the format or baud rate of signal change, the parameters will change as well. Therefore, there is a trade-off between the time used for finding the relatively best pair of parameters and the henceforth promoted accuracies.</p>
+</div>
+<div class="section" id="g-effect-of-sampling-jitter-on-opm-performance">
+<span id="jitter"></span><h3>G. Effect of sampling jitter on OPM performance<a class="headerlink" href="#g-effect-of-sampling-jitter-on-opm-performance" title="Permalink to this headline">¶</a></h3>
+<p>As we know, the clock driving ADC will inevitably have jitters as the sampling rate drops. Sampling jitters will cause a deviation between the real sampling rate and the standard sampling rate, which means the sampling interval is not fixed. Thus, AADTP tends to bear the brunt because of its generation dependence on the fixed delay. To investigate the effect of sampling jitter on OPM performance, we simulate three degrees of sampling errors based on the 8 GSa/s sampling rate and compare the OPM performances with the performance under no sampling error situation.</p>
+<p>In Table VI, the jitter root mean square (RMS) values represent the variances of sampling errors because we assume the error subjects to the normal distribution with 0 as the mean. It can be seen that these three kinds of clock jitters have almost no effect on the three classification tasks because the accuracy of each can be maintained above 98%. Although OSNR error increase as the sampling error raise, the MAE values of OSNR estimation are still within an acceptable range. Therefore, it can be concluded that sampling errors within a specific range will not excessively affect the performance of OPM.</p>
+</div>
+</div>
+<div class="section" id="conclusions">
+<span id="con"></span><h2>4. CONCLUSIONS<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>In this paper, we have investigated the OPM technique for intermediate nodes of the optical network by using the multi-task learning neural network model with inputs of AADTP and AAH generated by direct detection. In the experiment, signals with two types of modulation formats (QPSK, 16QAM), two baud rates (14 GBaud, 28 GBaud), three kinds of chromatic dispersions (0 ps/nm, 858.5 ps/nm, and 1507.9 ps/nm) and several OSNR values are tested. The best test accuracies for MFI, BRI, and CDI are 100%, 99.81%, and 99.83%, respectively. The mean absolute error of test OSNR estimation is 0.2867 dB over the range of 10-24 dB (QPSK), 15-29 dB (16QAM). In summary, the main findings are as follows:</p>
+<ol class="simple">
+<li><p>AADTP can be used to extract statistical features like traditional ADTP but without the prior knowledge of baud rate. The generation of AADTP is only dependent on the sampling rate. It is more flexible, and it possesses low computational complexity for OPM in real scenarios.</p></li>
+<li><p>Signals to be monitored can be detected by one PD, which is cost-effective. AADTP and AAH can be generated from the same waveform. Choosing low bandwidth components can further reduce the cost and maintain a relatively good monitoring performance simultaneously. Meanwhile, the sampling jitter only has a limited effect on the OPM performance, which ensure the application of low bandwidth PD and ADC.</p></li>
+<li><p>The performance of the multi-task learning model with AADTP and AAH as inputs is better than that of the single-input or single-output model. At the same time, it does not require additional time and computational complexity.</p></li>
+<li><p>Apart from hyperparameter optimization, the optimization of generation parameters of the dataset can develop the OPM performance as well. The shortcut of finding generation parameters is time-consuming, and the best parameters only apply to specific signals.</p></li>
+</ol>
+<p>Application of the NN model in real scenarios is a practical problem worth studying because it is hard to collect data with labels in the deployed communication system. Transfer learning is an effective way to solve this problem. This method requires less data by doing transfer learning based on the pre-trained NN model from the simulation system. In this way, only a small quantity of dataset (about 20%-25% data compared with standard dataset) is needed [37, 38]. Apart from this, nonlinear noise monitoring in the WDM system is another interesting topic for us to study in the future.</p>
+</div>
+<div class="section" id="references">
+<h2>5. References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<ol class="simple">
+<li><p>F. N. Khan, Q. Fan, C. Lu, and A. P. T. Lau, “An Optical Communication’s Perspective on Machine Learning and Its Applications,” J. Lightwave Technol., vol. 37, no. 2, pp. 493–516, 2019.</p></li>
+<li><p>D. Kreutz, F. M. V. Ramos, P. Verissimo, C. E. Rothenberg, S. Azodolmolky, and S. Uhlig, “Software-Defined Networking: A Comprehensive Survey,” arXiv:1406.0440 [cs], 2014.</p></li>
+<li><p>D. Zhao, L. Xi, X. Tang, W. Zhang, Y. Qiao, and X. Zhang, “Periodic Training Sequence Aided In-Band OSNR Monitoring in Digital Coherent Receiver,” IEEE Photonics J., vol. 6, no. 4, pp. 1–8, 2014.</p></li>
+<li><p>Y. Peng, Y. Chen, Q. Sui, D. Wang, D. Geng, F. Fu, and Z. Li, “In-band OSNR monitoring based on low-bandwidth coherent receiver and tunable laser,” Frontiers of Optoelectronics, vol. 9, no. 3, pp. 526–530, 2016.</p></li>
+<li><p>J. H. Lee, H. Y. Choi, S. K. Shin, and Y. C. Chung, “A Review of the Polarization-Nulling Technique for Monitoring Optical-Signal-to-Noise Ratio in Dynamic WDM Networks,” J. Lightwave Technol., vol. 24, no. 11, pp. 4162–4171, 2006.</p></li>
+<li><p>C. Floridia, M. de Lacerda Rocha, J.C. de Moraes, and E.W. Bezerra, “High accuracy and fast acquisition time of polarisation nulling-based OSNR monitor,” Electron. Lett., vol. 46, no. 2, pp. 152–153, 2010.</p></li>
+<li><p>E. Flood, W. H. Guo, D. Reid, M. Lynch, A. L. Bradley, L. P. Barry, and J. F. Donegan, “Interferometer based in-band OSNR monitoring of single and dual polarization QPSK signals,” in Proc. ECOC, 2010, pp. 1-3.</p></li>
+<li><p>J. Qiu, Z. Huang, B. Yuan, N. An, D. Kong, and J. Wu, “Multi-wavelength in-band OSNR monitor based on Lyot-Sagnac interferometer,” Opt. Express, vol. 23, no. 16, pp. 20257–20266, 2015.</p></li>
+<li><p>M. Nakajima, N. Nemoto, K. Yamaguchi, J. Yamaguchi, K. Suzuki, and T. Hashimoto, “In-band OSNR Monitors Comprising Programmable Delay Line Interferometer Integrated with Wavelength Selective Switch by Spatial and Planar Optical Circuit,” in Proc. Optical Fiber Communication Conference, 2016, pp. 1-3.</p></li>
+<li><p>M. D. Pelusi, A. Fu, and B. J. Eggleton, “Multi-channel in-band OSNR monitoring using Stimulated Brillouin Scattering,” Opt. Express, vol. 18, no. 9, pp. 9435–9446, 2010.</p></li>
+<li><p>M. C. Tan, F. N. Khan, W. H. Al-Arashi, Y. Zhou, and A. P. T. Lau, “Simultaneous optical performance monitoring and modulation format/bit-rate identification using principal component analysis,” J. Opt. Commun. Netw., vol. 6, no. 5, pp. 441–448, 2014.</p></li>
+<li><p>D. Wang, M. Zhang, Z. Li, Y. Cui, J. Liu, Y. Yang, and H. Wang, “Nonlinear decision boundary created by a machine learning-based classifier to mitigate nonlinear phase noise,” in Proc. ECOC, 2015, pp. 1-3.</p></li>
+<li><p>D. Wang, M. Zhang, Z. Cai, Y. Cui, Z. Li, H. Han, M. Fu, and B. Luo, “Combatting nonlinear phase noise in coherent optical systems with an optimized decision processor based on machine learning,” Opt. Commun., vol. 369, pp. 199–208, 2016.</p></li>
+<li><p>T. B. Anderson, A. Kowalczyk, K. Clarke, S. D. Dods, D. Hewitt, and J. C. Li, “Multi Impairment Monitoring for Optical Networks,” J. Lightwave Technol., vol. 27, no. 16, pp. 3729–3736, 2009.</p></li>
+<li><p>F. N. Khan, T. S. R. Shen, Y. Zhou, A. P. T. Lau, and C. Lu, “Optical Performance Monitoring Using Artificial Neural Networks Trained with Empirical Moments of Asynchronously Sampled Signal Amplitudes,” IEEE Photonic. Tech. L., vol. 24, no. 12, pp. 982–984, 2012.</p></li>
+<li><p>S. Kashi, Q. Zhuge, J. C. Cartledge, A. Borowiec, D. Charlton, C. Laperle, and M. O’Sullivan, “Fiber Nonlinear Noise-to-Signal Ratio Monitoring Using Artificial Neural Networks,” in Proc. ECOC, 2017, pp. 1–3.</p></li>
+<li><p>F. J. V. Caballero, D. J. Ives, C. Laperle, D. Charlton, Q. Zhuge, M. O’Sullivan, and S. J. Savory, “Machine Learning Based Linear and Nonlinear Noise Estimation,” J. Opt. Commun. Netw., vol. 10, no. 10, pp. D42–D51, 2018.</p></li>
+<li><p>S. Kashi, Q. Zhuge, J. C. Cartledge, S. Ali Etemad, and A. Borowiec, “Nonlinear Signal-to-Noise Ratio Estimation in Coherent Optical Fiber Transmission Systems Using Artificial Neural Networks,” J. Lightwave Technol., vol. 36, no. 23, pp. 5424–5431, 2018.</p></li>
+<li><p>J. Li, D. Wang, and M. Zhang, “Low-Complexity Adaptive Chromatic Dispersion Estimation Scheme Using Machine Learning for Coherent Long-Reach Passive Optical Networks,” IEEE Photonics J., vol. 11, no. 5, pp. 1–11, 2019.</p></li>
+<li><p>W. Zhang, D. Zhu, Z. He, N. Zhang, X. Zhang, H. Zhang, and Y. Li, “Identifying modulation formats through 2D Stokes planes with deep neural networks,” Opt. Express, vol. 26, no. 18, p. 23507, 2018.</p></li>
+<li><p>D. Wang, M. Zhang, J. Li, Z. Li, J. Li, C. Song, and X. Chen, “Intelligent constellation diagram analyzer using convolutional neural network-based deep learning,” Opt. Express, vol. 25, no. 15, pp. 17150, 2017.</p></li>
+<li><p>Z. Wang, A. Yang, P. Guo, and P. He, “OSNR and nonlinear noise power estimation for optical fiber communication systems using LSTM based deep learning technique,” Opt. Express, vol. 26, no.16, pp. 21346, 2018.</p></li>
+<li><p>A.L. Yi, L.S. Yan, H.J. Liu, L. Jiang, P. Yan, B. Luo, and W. Pan, “Modulation format identification and OSNR monitoring utilizing the density distributions in Stokes axes for digital coherent receivers,” Opt. Express, vol. 27, no. 4, pp. 4471–4479, 2019.</p></li>
+<li><p>Q. Xiang, Y. Yang, Q. Zhang, and Y. Yao, “Joint and Accurate OSNR Estimation and Modulation Format Identification Scheme Using The Feature-Based ANN,” IEEE Photonics J., vol. 11, no. 4, pp. 1–11, 2019.</p></li>
+<li><p>Z. Wan, Z. Yu, L. Shu, Y. Zhao, H. Zhang, and K. Xu, “Intelligent optical performance monitor using multi-task learning based artificial neural network,” Opt. Express, vol. 27, no. 8, pp. 11281, 2019.</p></li>
+<li><p>D. Wang, M. Wang, M. Zhang, Z. Zhang, and H. Yang, “Cost-effective and data size–adaptive OPM at intermediated node using convolutional neural network-based image processor,” Opt. Express, vol. 27, no. 7, pp. 9403, 2019.</p></li>
+<li><p>F. N. Khan, K. Zhong, X. Zhou, W. H. Al-Arashi, C. Yu, C. Lu, and A. P. T. Lau, “Joint OSNR monitoring and modulation format identification in digital coherent receivers using deep neural networks,” Opt. Express, vol. 25, no. 15, pp. 17767, 2017.</p></li>
+<li><p>C. Wang, S. Fu, H. Wu, M. Luo, X. Li, M. Tang, and D. Liu, “Joint OSNR and CD monitoring in digital coherent receiver using long short-term memory neural network,” Opt. Express 27(5), 6936 (2019).</p></li>
+<li><p>Y. Cheng, S. Fu, M. Tang, and D. Liu, “Multi-task deep neural network (MT-DNN) enabled optical performance monitoring from directly detected PDM-QAM signals,” Opt. Express, vol. 27, no. 13, pp. 19062, 2019.</p></li>
+<li><p>C. C. K. Chan, Ed., “Optical performance monitoring based on asynchronous delay-tap sampling,” in Optical performance monitoring: advanced techniques for next-generation photonic networks, Academic Press/Elsevier, 2010, Chap.7</p></li>
+<li><p>Y. Yu, B. Zhang, and C. Yu, “Optical signal to noise ratio monitoring using single channel sampling technique,” Opt. Express, vol. 22, no. 6, pp. 6874, 2014.</p></li>
+<li><p>S. Ruder, “An Overview of Multi-Task Learning in Deep Neural Networks,” arXiv:1706.05098 [cs, stat], (2017).</p></li>
+<li><p>Caruana, Rich. “Multitask learning. “Mach. Learn., vol. 28, no. 1, pp. 41–75, 1997.</p></li>
+<li><p>C. Willmott and K. Matsuura, “Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance,” Clim. Res., vol. 30, pp. 79–82, 2005.</p></li>
+<li><p>D. A. Clevert, T. Unterthiner, and S. Hochreiter, “Fast and Accurate Deep Network Learning by Exponential Linear Units (ELUs),” arXiv:1511.07289 [cs], (2015).</p></li>
+<li><p>B. Shahriari, K. Swersky, Z. Wang, R. P. Adams, and N. de Freitas, “Taking the Human Out of the Loop: A Review of Bayesian Optimization,” in Proc. of the IEEE, vol. 104, no. 1, pp. 148–175, 2016.</p></li>
+<li><p>Cheng Y., Zhang W., Fu S., Tang M., and Liu D., “Transfer learning simplified multi-task deep neural network for PDM-64QAM optical performance monitoring.” Opt. Express, vol. 28, no. 5, pp. 7607-7617, 2020.</p></li>
+<li><p>Xia L., Zhang J., Hu S., Zhu M., Song Y., and Qiu K., “Transfer learning assisted deep neural network for OSNR estimation.” Opt. Express, vol. 27, no. 14, pp. 19398-19406, 2019.</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="cv.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">CV</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2021OE.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Optimization strategy of power control for C+L+S band transmission using simulated annealing algorithm</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Huaijian Luo<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
