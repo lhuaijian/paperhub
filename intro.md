@@ -1,16 +1,31 @@
-# Welcome to your Jupyter Book
+# Paperhub of Huaijian Luo
 
-This is a small sample book to give you a feel for how book content is
-structured.
+### What is it?
 
-:::{note}
-Here is a note!
-:::
+---
 
-And here is a code block:
+It includes my CV and journal papers published from 2020-2021.
+
+- [CV](cv.md)
+
+- [2020/JLT: Cost-effective multi-parameter optical performance monitoring using multi-task deep learning with adaptive ADTP and AAH](2020JLT.md)
+
+- [2021/OE: Optimization strategy of power control for C+L+S band transmission using simulated annealing algorithm](2021OE.md)
+
+
+### How to cite them?
+
+---
 
 ```
-e = mc^2
+@article{luo2021cost,
+  title={Cost-Effective Multi-Parameter Optical Performance Monitoring Using Multi-Task Deep Learning With Adaptive ADTP and AAH},
+  author={Luo, Huaijian and Huang, Zhuili and Wu, Xiong and Yu, Changyuan},
+  journal={Journal of Lightwave Technology},
+  volume={39},
+  number={6},
+  pages={1733--1741},
+  year={2021},
+  publisher={IEEE}
+}
 ```
-
-Check out the content pages bundled with this sample book to see more.

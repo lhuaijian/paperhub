@@ -3,7 +3,11 @@
 
 format: jb-book
 root: intro
-chapters:
-# - file: markdown
-# - file: notebooks
-- file: mkd1
+parts:
+  - caption: Basic Info
+    chapters:
+      - file: cv
+  - caption: Journal Papers
+    chapters:
+      - file: 2020JLT
+      - file: 2021OE
